@@ -36,6 +36,19 @@ Token Trail addresses a critical need in academic environments: detecting potent
 
 ---
 
+<details>
+<summary>📸 View All Screenshots</summary>
+
+### Student Portal
+![Student submission form](docs/screenshots/student-portal.png)
+
+### Instructor Dashboard
+![Instructor dashboard overview](docs/screenshots/instructor-dashboard.png)
+
+</details>
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
