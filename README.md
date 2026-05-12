@@ -37,13 +37,24 @@ Token Trail addresses a critical need in academic environments: detecting potent
 ---
 
 <details>
-<summary>📸 View All Screenshots</summary>
+<summary>📸 View Screenshots</summary>
+
+### Landing Page
+![Landing page](docs/screenshots/Landing_Page.png)
 
 ### Student Portal
-![Student submission form](docs/screenshots/student-portal.png)
+![Student submission form](docs/screenshots/Student_Submit.png)
 
 ### Instructor Dashboard
-![Instructor dashboard overview](docs/screenshots/instructor-dashboard.png)
+![Instructor dashboard](docs/screenshots/Instructor_Dashboard.png)
+
+### Assignment Page
+![Assignment Details](docs/screenshots/Assignment_Page_top.png)
+![Submissions and analysis control](docs/screenshots/Assignment_Page_bottom.png)
+
+### Analysis and Comparison
+![Analysis Overview](docs/screenshots/Analysis_Overview.png)
+![Comparison](docs/screenshots/Submission_Comparison.png)
 
 </details>
 
