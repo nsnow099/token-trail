@@ -108,17 +108,16 @@ For detailed setup instructions, troubleshooting, and prerequisites, see [docs/S
 
 ## 👤 My Contributions
 
-### Frontend (nsnow099) — Design & Implementation Lead
+### Frontend (Nicholas Snow) — Design & Implementation Lead
 This is a team project (7 people total), with the following breakdown:
 
-**UI/UX Design** (100% - My Work)
+**UI/UX Design** (My Work)
 - Designed both student submission portal and instructor dashboard from scratch
 - Established design system with consistent typography, spacing, and color palette
 - Created accessible, intuitive workflows for complex operations (key management, submission review)
-- Implemented responsive design patterns for mobile, tablet, and desktop viewports
 
-**Frontend Development** (90% - Mostly My Work)
-- Built 22+ React components from design to implementation
+**Frontend Development** (My Work With Support From Team Members)
+- Built React components from design to implementation
 - Implemented core architecture: routing, authentication, state management with Context API
 - Developed custom hooks for form handling, API calls, and authentication
 - Integrated with backend FastAPI APIs with proper error handling and loading states
@@ -126,22 +125,14 @@ This is a team project (7 people total), with the following breakdown:
 - Built instructor dashboard CRUD workflows (courses, assignments, keys, submissions)
 - Implemented JWT token management and protected routes
 
-**Frontend Testing** (100% - My Work)
+**Frontend Testing** (My Work)
 - Established testing strategy using Vitest + React Testing Library
 - Wrote comprehensive test suite covering unit, component, and integration tests
 - Created reusable test patterns for hooks, services, and async operations
 - Prioritized user-behavior testing over implementation details
 
-**Performance & Accessibility** (100% - My Work)
-- Optimized frontend bundle with code splitting and tree-shaking
-- Implemented responsive design with mobile-first approach
-- Achieved WCAG 2.1 AA accessibility compliance
-- Added keyboard navigation, ARIA labels, and semantic HTML throughout
-
-**Supporting Contributors**
-- Team members provided code reviews, bug fixes, and feature refinement
+**Backend**
 - Backend team built FastAPI server, analysis engine, and database integration
-- See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full team breakdown
 
 ---
 
@@ -158,17 +149,9 @@ This is a team project (7 people total), with the following breakdown:
 **Project Phase**: Core features implemented; UI stubs prepared for future similarity report & code comparison views.
 
 **Next Steps**:
-- Implement ranked similarity report UI
-- Build side-by-side code comparison view
-- Enhance analysis performance for large assignment sets
+- Create more dynamic and detailed comparison views
 - Add support for additional languages (Python, JavaScript)
 
 ---
 
-## 🤝 Contributing
-
-Contributions welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
----
-
-**Created**: May 2026 | **Status**: Actively Maintained
+**Created**: February 2026 | **Status**: Actively Maintained
