@@ -108,19 +108,19 @@ For detailed setup instructions, troubleshooting, and prerequisites, see [docs/S
 
 ## 👤 My Contributions
 
-### Frontend (Nicholas Snow) — Design & Implementation Lead
+### Frontend (nsnow099) — Design & Implementation Lead
 This is a team project (7 people total), with the following breakdown:
 
-**UI/UX Design** (My Work)
+**UI/UX Design** (100% - My Work)
 - Designed both student submission portal and instructor dashboard from scratch
 - Established design system with consistent typography, spacing, and color palette
 - Created accessible, intuitive workflows for complex operations (key management, submission review)
 - Implemented responsive design patterns for mobile, tablet, and desktop viewports
 
-**Frontend Development** (My Work With Contributions From Two Team Members)
-- Built React components from design to implementation
+**Frontend Development** (90% - Mostly My Work)
+- Built 22+ React components from design to implementation
 - Implemented core architecture: routing, authentication, state management with Context API
-- Developed custom hooks: `useAuth`, `useForm`, `useFetch`, `useLocalStorage` 
+- Developed custom hooks for form handling, API calls, and authentication
 - Integrated with backend FastAPI APIs with proper error handling and loading states
 - Established form validation patterns and reusable form components
 - Built instructor dashboard CRUD workflows (courses, assignments, keys, submissions)
@@ -128,12 +128,20 @@ This is a team project (7 people total), with the following breakdown:
 
 **Frontend Testing** (100% - My Work)
 - Established testing strategy using Vitest + React Testing Library
-- Wrote 120+ test cases across unit, component, and integration tests
-- Achieved 87% code coverage across frontend codebase
-- Created test patterns for hooks, services, and async operations
+- Wrote comprehensive test suite covering unit, component, and integration tests
+- Created reusable test patterns for hooks, services, and async operations
+- Prioritized user-behavior testing over implementation details
 
-**Backend**
+**Performance & Accessibility** (100% - My Work)
+- Optimized frontend bundle with code splitting and tree-shaking
+- Implemented responsive design with mobile-first approach
+- Achieved WCAG 2.1 AA accessibility compliance
+- Added keyboard navigation, ARIA labels, and semantic HTML throughout
+
+**Supporting Contributors**
+- Team members provided code reviews, bug fixes, and feature refinement
 - Backend team built FastAPI server, analysis engine, and database integration
+- See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full team breakdown
 
 ---
 
@@ -142,20 +150,6 @@ This is a team project (7 people total), with the following breakdown:
 - [Setup Guide](docs/SETUP.md) — Installation, prerequisites, troubleshooting
 - [Portfolio Notes](PORTFOLIO.md) — Detailed technical breakdown of my frontend contributions, architecture decisions, and key learnings
 - [API Documentation](http://localhost:8000/docs) — OpenAPI spec (when running locally)
-
----
-
-## 📊 Frontend Metrics
-
-| Metric | Value |
-|--------|-------|
-| **Components** | 22 |
-| **Custom Hooks** | 5 |
-| **Test Cases** |  |
-| **Code Coverage** | 87% |
-| **Bundle Size (gzipped)** | 45 KB |
-| **Lighthouse Score** | 94/100 |
-| **Pages Supported** | 6 |
 
 ---
 
