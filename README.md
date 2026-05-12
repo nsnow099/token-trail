@@ -174,7 +174,8 @@ This is a team project (7 people total), with the following breakdown:
 
 **Next Steps**:
 - Create more dynamic and detailed comparison views
-- Add support for additional languages (Python, JavaScript)
+- Add support for additional languages (Python, JavaScript)\
+- Implement notifications and account control
 
 ---
 
