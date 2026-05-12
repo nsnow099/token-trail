@@ -1,16 +1,5 @@
 # Portfolio: Token Trail Frontend
 
-## 📋 Project Summary
-
-**Token Trail** is an instructor-facing code similarity detection system for academic assignments. I designed and built the **complete frontend** from UX/UI specification through implementation and testing.
-
-**My Role**: Frontend Architect & UI/UX Designer  
-**Team Size**: 2 (me: frontend; teammate: backend/analysis)  
-**Timeline**: 5+ weeks (ongoing)  
-**Technologies**: React 18, Vite, Tailwind CSS, Vitest, React Testing Library
-
----
-
 ## 🎨 UI/UX Design
 
 ### Design Philosophy
@@ -317,15 +306,6 @@ const handleColumnClick = (columnName) => {
 
 ## 🧪 Testing Strategy
 
-### Test Coverage by Category
-
-| Category | Tests | Tools | Coverage |
-|----------|-------|-------|----------|
-| **Components** | Unit + Integration | React Testing Library | 85%+ |
-| **Hooks** | Unit | Vitest | 90%+ |
-| **Services** | Unit (mocked API) | Vitest | 80%+ |
-| **Utils** | Unit | Vitest | 95%+ |
-
 ### Test Types
 
 **1. Component Tests** (React Testing Library)
@@ -459,110 +439,6 @@ npm test -- --ui         # Interactive UI
 npm test -- --coverage   # Coverage report
 npm test SubmissionForm  # Single test file
 ```
-
----
-
-## 🎯 Key Skills Demonstrated
-
-### 1. **Component-Driven Architecture**
-- Built 20+ reusable React components
-- Avoided monolithic components; favored composition
-- Props interface clearly documents component behavior
-- Prop types + JSDoc comments for IDE autocomplete
-
-### 2. **Responsive Web Design**
-- Mobile-first approach using Tailwind CSS breakpoints
-- Tested on mobile, tablet, desktop viewports
-- Touch-friendly buttons (min 44x44px), readable text
-- Accessible color contrast (WCAG AA)
-
-### 3. **Accessibility (A11y)**
-- Semantic HTML (`<button>`, `<form>`, `<label>`)
-- ARIA labels + roles where needed
-- Keyboard navigation (Tab, Enter, Escape)
-- Focus indicators on all interactive elements
-- Screen reader tested with NVDA/JAWS emulation
-
-### 4. **Performance Optimization**
-- Code splitting per route (lazy loading)
-- React.memo for expensive components
-- useMemo/useCallback for computed values & callbacks
-- Production bundle size: ~45 KB (gzipped)
-- Lighthouse score: 94/100 (Performance)
-
-### 5. **Testing Best Practices**
-- Test behavior, not implementation (user-centric)
-- Mock external dependencies (API, localStorage)
-- 80%+ code coverage maintained
-- CI/CD integration (runs on every push)
-
-### 6. **State Management**
-- Context API + custom hooks (no Redux needed at this scale)
-- Clear data flow: Component → Hook → Service → API
-- Proper cleanup (useEffect dependencies, event listeners)
-- Avoided common pitfalls (stale closures, unnecessary re-renders)
-
-### 7. **Error Handling & User Experience**
-- Network errors: Retry logic with exponential backoff
-- Validation errors: Inline feedback + form-level summary
-- Timeout handling: User-friendly "slow connection" message
-- Successful operations: Toast notifications with auto-dismiss
-- Accessibility: Error messages linked to form fields (for screen readers)
-
----
-
-## 📊 Project Metrics
-
-| Metric | Value |
-|--------|-------|
-| **Components** | 22 |
-| **Custom Hooks** | 5 |
-| **Test Files** | 14 |
-| **Test Cases** | 120+ |
-| **Code Coverage** | 87% |
-| **Bundle Size (gzipped)** | 45 KB |
-| **Lighthouse Score** | 94/100 |
-| **Pages Supported** | 6 |
-| **API Endpoints Used** | 18 |
-
----
-
-## 🚀 Future Improvements
-
-**Near-term** (MVP → v1.0):
-- [ ] Implement side-by-side code comparison view
-- [ ] Add ranked similarity report UI
-- [ ] Implement real-time submission status updates (WebSocket)
-- [ ] Add analytics dashboard (submission trends, detection accuracy)
-
-**Medium-term**:
-- [ ] Dark mode theme
-- [ ] Multi-language support (i18n)
-- [ ] Export reports as PDF
-- [ ] Internationalization (RTL support for Arabic/Hebrew)
-
-**Performance**:
-- [ ] Virtual scrolling for large submission lists
-- [ ] Query caching with React Query
-- [ ] Service Worker for offline mode
-- [ ] Image optimization (if comparisons include screenshots)
-
----
-
-## 🔗 Links
-
-- **Repository**: [github.com/nsnow099/token-trail](https://github.com/nsnow099/token-trail)
-- **Live Demo**: *(Pending deployment)*
-- **Backend API Docs**: http://localhost:8000/docs (when running locally)
-- **Original Project**: [github.com/Ikechukwu-Okogwu/token-trail](https://github.com/Ikechukwu-Okogwu/token-trail)
-
----
-
-## ✍️ Closing Thoughts
-
-This project reinforced my understanding of **full-stack frontend development**: from UX/UI thinking through polished, tested React components. Key takeaway: *Great frontend is invisible*—users don't think about the technology; they just accomplish their goals efficiently and intuitively.
-
-I'm proud of the 85%+ test coverage and the accessibility-first approach. In a real academic tool, these aren't nice-to-have; they're critical for instructor productivity and student trust.
 
 ---
 
