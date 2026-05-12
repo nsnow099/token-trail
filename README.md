@@ -108,17 +108,17 @@ For detailed setup instructions, troubleshooting, and prerequisites, see [docs/S
 
 ## 👤 My Contributions
 
-### Frontend (nsnow099) — Design & Implementation Lead
+### Frontend (Nicholas Snow) — Design & Implementation Lead
 This is a team project (7 people total), with the following breakdown:
 
-**UI/UX Design** (100% - My Work)
+**UI/UX Design** (My Work)
 - Designed both student submission portal and instructor dashboard from scratch
 - Established design system with consistent typography, spacing, and color palette
 - Created accessible, intuitive workflows for complex operations (key management, submission review)
 - Implemented responsive design patterns for mobile, tablet, and desktop viewports
 
-**Frontend Development** (90% - Mostly My Work)
-- Built 22+ React components from design to implementation
+**Frontend Development** (My Work With Contributions From Two Team Members)
+- Built React components from design to implementation
 - Implemented core architecture: routing, authentication, state management with Context API
 - Developed custom hooks: `useAuth`, `useForm`, `useFetch`, `useLocalStorage` 
 - Integrated with backend FastAPI APIs with proper error handling and loading states
@@ -132,16 +132,8 @@ This is a team project (7 people total), with the following breakdown:
 - Achieved 87% code coverage across frontend codebase
 - Created test patterns for hooks, services, and async operations
 
-**Performance & Accessibility** (100% - My Work)
-- Optimized bundle size to 45 KB (gzipped) with code splitting
-- Achieved 94/100 Lighthouse performance score
-- Implemented WCAG 2.1 AA accessibility compliance
-- Added keyboard navigation, ARIA labels, and semantic HTML
-
-**Supporting Contributors**
-- Team members provided code reviews, bug fixes, and feature refinement
+**Backend**
 - Backend team built FastAPI server, analysis engine, and database integration
-- See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full team breakdown
 
 ---
 
@@ -159,7 +151,7 @@ This is a team project (7 people total), with the following breakdown:
 |--------|-------|
 | **Components** | 22 |
 | **Custom Hooks** | 5 |
-| **Test Cases** | 120+ |
+| **Test Cases** |  |
 | **Code Coverage** | 87% |
 | **Bundle Size (gzipped)** | 45 KB |
 | **Lighthouse Score** | 94/100 |
