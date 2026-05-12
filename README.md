@@ -180,3 +180,4 @@ This is a team project (7 people total), with the following breakdown:
 ---
 
 **Created**: February 2026 | **Status**: Actively Maintained
+**By**: Nicholas Snow, Ikechukwu Okogwu, Charlotte Kerrigan, Yash Roop, Ivie Osagie, Zhang Congda, Gabriel Ensor
