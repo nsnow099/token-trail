@@ -26,6 +26,54 @@ function scoreMeta(score) {
   return { pct, color: 'text-green-400', bg: 'bg-green-500', ringColor: 'ring-green-500/30', badgeCls: 'bg-green-900/40 text-green-400 border-green-800', label: 'Minimal Overlap' }
 }
 
+const HIGHLIGHT_PALETTES = [
+  {
+    base: 'bg-sky-100 hover:bg-sky-200',
+    active: 'bg-sky-200 hover:bg-sky-300',
+    gutter: 'text-sky-500 border-r-sky-500',
+  },
+  {
+    base: 'bg-emerald-100 hover:bg-emerald-200',
+    active: 'bg-emerald-200 hover:bg-emerald-300',
+    gutter: 'text-emerald-500 border-r-emerald-500',
+  },
+  {
+    base: 'bg-fuchsia-100 hover:bg-fuchsia-200',
+    active: 'bg-fuchsia-200 hover:bg-fuchsia-300',
+    gutter: 'text-fuchsia-500 border-r-fuchsia-500',
+  },
+  {
+    base: 'bg-amber-100 hover:bg-amber-200',
+    active: 'bg-amber-200 hover:bg-amber-300',
+    gutter: 'text-amber-500 border-r-amber-500',
+  },
+  {
+    base: 'bg-lime-100 hover:bg-lime-200',
+    active: 'bg-lime-200 hover:bg-lime-300',
+    gutter: 'text-lime-600 border-r-lime-600',
+  },
+  {
+    base: 'bg-cyan-100 hover:bg-cyan-200',
+    active: 'bg-cyan-200 hover:bg-cyan-300',
+    gutter: 'text-cyan-500 border-r-cyan-500',
+  },
+  {
+    base: 'bg-rose-100 hover:bg-rose-200',
+    active: 'bg-rose-200 hover:bg-rose-300',
+    gutter: 'text-rose-500 border-r-rose-500',
+  },
+  {
+    base: 'bg-violet-100 hover:bg-violet-200',
+    active: 'bg-violet-200 hover:bg-violet-300',
+    gutter: 'text-violet-500 border-r-violet-500',
+  },
+  {
+    base: 'bg-indigo-100 hover:bg-indigo-200',
+    active: 'bg-indigo-200 hover:bg-indigo-300',
+    gutter: 'text-indigo-500 border-r-indigo-500',
+  },
+]
+
 function buildLineHighlightMap(regions, side, activeIdx) {
   const map = {}
   if (!regions) return map
@@ -104,7 +152,7 @@ export default function SimilarityComparisonPage() {
       <main className={`ml-55 flex-1 flex flex-col overflow-hidden ${isDark ? 'bg-gray-950' : 'bg-gray-50'}`}>
 
         {/* ── Top bar ── */}
-        <div className={`flex-shrink-0 border-b ${isDark ? 'border-gray-800 bg-gray-900/90' : 'border-gray-200 bg-white/90'} backdrop-blur-sm px-5 py-3`}>
+        <div className={`shrink-0 border-b ${isDark ? 'border-gray-800 bg-gray-900/90' : 'border-gray-200 bg-white/90'} backdrop-blur-sm px-5 py-3`}>
           <div className="flex items-center gap-4">
             <Link
               to={`/similarity/${runId}`}
@@ -176,7 +224,7 @@ export default function SimilarityComparisonPage() {
 
         {/* ── Context / explanation layer ── */}
         {data && (
-          <div className={`flex-shrink-0 border-b ${isDark ? 'border-gray-800/60 bg-gray-900/50' : 'border-gray-200/60 bg-gray-100/50'} px-5 py-2`}>
+          <div className={`shrink-0 border-b ${isDark ? 'border-gray-800/60 bg-gray-900/50' : 'border-gray-200/60 bg-gray-100/50'} px-5 py-2`}>
             <p className="text-xs leading-relaxed">
               <span className={isDark ? 'text-gray-400' : 'text-gray-700'}>
                 {data.summary || `Detected ${regions.length} matched block(s) across both submissions.`}
@@ -194,7 +242,7 @@ export default function SimilarityComparisonPage() {
 
         {/* ── Match navigation bar ── */}
         {data && regions.length > 0 && (
-          <div className={`flex-shrink-0 flex items-center justify-between border-b ${isDark ? 'border-gray-800/60 bg-gray-900/40' : 'border-gray-200/60 bg-gray-100/40'} px-5 py-2`}>
+          <div className={`shrink-0 flex items-center justify-between border-b ${isDark ? 'border-gray-800/60 bg-gray-900/40' : 'border-gray-200/60 bg-gray-100/40'} px-5 py-2`}>
             <div className="flex items-center gap-2">
               <button
                 onClick={handlePrev}
@@ -271,7 +319,7 @@ export default function SimilarityComparisonPage() {
 
         {/* ── Footer disclaimer ── */}
         {data && (
-          <div className={`flex-shrink-0 border-t ${isDark ? 'border-gray-800 bg-gray-900/80' : 'border-gray-200 bg-gray-100/80'} px-5 py-2.5`}>
+          <div className={`shrink-0 border-t ${isDark ? 'border-gray-800 bg-gray-900/80' : 'border-gray-200 bg-gray-100/80'} px-5 py-2.5`}>
             <div className={`flex items-center gap-2 text-xs ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
               <Info className="h-3.5 w-3.5 shrink-0 text-amber-500/70" />
               Similarity scores indicate structural overlap between submissions and are not proof of misconduct.
@@ -302,7 +350,7 @@ const CodePane = forwardRef(function CodePane(
   return (
     <div className="flex flex-1 flex-col overflow-hidden min-w-0">
       {/* Pane header */}
-      <div className={`flex-shrink-0 border-b ${isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-gray-100'} px-4 py-3`}>
+      <div className={`shrink-0 border-b ${isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-gray-100'} px-4 py-3`}>
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-start gap-3 min-w-0">
             <div className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold shadow-sm ${
@@ -348,12 +396,9 @@ const CodePane = forwardRef(function CodePane(
                 let rowCls = isDark ? 'hover:bg-gray-800/60' : 'hover:bg-gray-200/60'
                 let gutterExtra = ''
                 if (hl) {
-                  rowCls = hl.isActive
-                    ? (isDark ? 'bg-brand-purple/15 hover:bg-brand-purple/20' : 'bg-brand-purple/10 hover:bg-brand-purple/15')
-                    : (isDark ? 'bg-brand-purple/[0.06] hover:bg-brand-purple/10' : 'bg-brand-purple/[0.04] hover:bg-brand-purple/8')
-                  gutterExtra = hl.isActive
-                    ? 'text-brand-purple border-r-brand-purple'
-                    : (isDark ? 'text-brand-purple/60 border-r-brand-purple/40' : 'text-brand-purple/70 border-r-brand-purple/50')
+                  const palette = HIGHLIGHT_PALETTES[hl.regionIdx % HIGHLIGHT_PALETTES.length]
+                  rowCls = hl.isActive ? palette.active : palette.base
+                  gutterExtra = palette.gutter
                 }
 
                 return (
