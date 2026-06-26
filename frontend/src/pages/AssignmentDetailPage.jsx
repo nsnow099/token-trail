@@ -91,6 +91,7 @@ export default function AssignmentDetailPage() {
   const [draftAllowLate, setDraftAllowLate]       = useState(false)
   const [draftAutoAnalysis, setDraftAutoAnalysis] = useState(false)
   const [draftExclusionCode, setDraftExclusionCode] = useState('')
+  const [draftIsOpen, setDraftIsOpen]             = useState(false)
   const [saveLoading, setSaveLoading]             = useState(false)
   const [saveError, setSaveError]                 = useState(null)
   const [copied, setCopied]                       = useState(false)
@@ -223,6 +224,7 @@ export default function AssignmentDetailPage() {
     setDraftDueDate(getDateInputValue(assignment.dueDate))
     setDraftAllowLate(Boolean(assignment.allowLate))
     setDraftAutoAnalysis(Boolean(assignment.autoAnalysis))
+    setDraftIsOpen(Boolean(assignment.isOpen))
     setDraftExclusionCode(assignment.exclusionCode || '')
     setSaveError(null)
   }, [assignment, isEditing])
@@ -232,6 +234,7 @@ export default function AssignmentDetailPage() {
     setDraftDueDate(getDateInputValue(assignment.dueDate))
     setDraftAllowLate(Boolean(assignment.allowLate))
     setDraftAutoAnalysis(Boolean(assignment.autoAnalysis))
+    setDraftIsOpen(Boolean(assignment.isOpen))
     setDraftExclusionCode(assignment.exclusionCode || '')
     setSaveError(null)
     setIsEditing(true)
@@ -252,6 +255,7 @@ export default function AssignmentDetailPage() {
       allowLate: draftAllowLate,
       autoAnalysis: draftAutoAnalysis,
       exclusionCode: draftExclusionCode.trim() || null,
+      isOpen: draftIsOpen,
     }
 
     try {
@@ -443,6 +447,30 @@ export default function AssignmentDetailPage() {
                           </div>
 
                           <MetaCard icon={Clock} label="Created" value={formatDate(assignment.createdAt)} />
+
+                          <div className="rounded-xl border border-gray-200 bg-white p-4">
+                            <div className="mb-1.5 flex items-center gap-1.5 text-xs text-gray-400 uppercase tracking-wide">
+                              <ToggleLeft className="h-3 w-3" /> Open to Submissions
+                            </div>
+                            {isEditing ? (
+                              <div className="inline-flex overflow-hidden rounded-xl border border-gray-200 bg-white text-sm shadow-sm">
+                                <button
+                                  type="button"
+                                  onClick={() => setDraftIsOpen(true)}
+                                  className={`px-3 py-1.5 ${draftIsOpen ? 'bg-brand-purple text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                                >Yes</button>
+                                <button
+                                  type="button"
+                                  onClick={() => setDraftIsOpen(false)}
+                                  className={`px-3 py-1.5 ${!draftIsOpen ? 'bg-brand-purple text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                                >No</button>
+                              </div>
+                            ) : (
+                              <p className="text-sm font-medium text-gray-800">
+                                {assignment.isOpen ? 'Yes' : 'No'}
+                              </p>
+                            )}
+                          </div>
                         </div>
 
                         {/* Exclusion code */}
