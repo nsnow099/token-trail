@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { login, signup } from '../services/api'
 import { FileText, Loader2, ClipboardList, BarChart3, Columns } from 'lucide-react'
 import Button from '../components/ui/Button'
@@ -13,7 +13,8 @@ const VALUE_POINTS = [
 ]
 
 export default function LoginPage() {
-  const [tab, setTab] = useState('signin')
+  const [searchParams] = useSearchParams()
+  const [tab, setTab] = useState(searchParams.get('tab') || 'signin') //signin or signup tab open on load
   const navigate = useNavigate()
 
   const [siEmail, setSiEmail]       = useState('')

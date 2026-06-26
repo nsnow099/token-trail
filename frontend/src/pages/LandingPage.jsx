@@ -67,7 +67,7 @@ export default function LandingPage() {
             Sign In
           </Link>
           <Link
-            to="/login"
+            to="/login?tab=signup"
             className="rounded-full bg-white px-4 py-1.5 text-sm font-medium text-brand-purple transition-all hover:bg-brand-pink"
           >
             Sign Up
